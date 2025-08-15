@@ -41,7 +41,7 @@ def predict_step(image_paths):
 # -------------------------
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python main.py path/to/image.jpg")
+        print(""C:\Users\jayal\OneDrive\Pictures\download.jpeg"")
         sys.exit(1)
 
     image_path = sys.argv[1]

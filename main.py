@@ -1,6 +1,5 @@
-import sys
-from transformers import VisionEncoderDecoderModel, ViTImageProcessor, AutoTokenizer
 import torch
+from transformers import VisionEncoderDecoderModel, ViTImageProcessor, AutoTokenizer
 from PIL import Image
 
 # -------------------------
@@ -37,13 +36,8 @@ def predict_step(image_paths):
     return preds
 
 # -------------------------
-# 3. Command-line usage
+# 3. Run on your image
 # -------------------------
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print(""/content/download.jpeg"")
-        sys.exit(1)
-
-    image_path = sys.argv[1]
-    result = predict_step([image_path])
-    print("Caption:", result[0])
+image_path = "/content/download.jpeg"  # 👈 change if needed
+result = predict_step([image_path])
+print("Caption:", result[0])
